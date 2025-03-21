@@ -1,28 +1,40 @@
 # Media Processor
 
-**Media Processor** — это универсальный набор утилит для работы с медиафайлами, включающий инструменты для обработки изображений, работы с аудио/видео, графических операций и обработки PDF-документов.
+A Python package that provides utilities for processing media files.
 
 ## 💡Features
-- **Image manipulation:**  
-  Applying filters and effects to enhance or stylize images.
+- **Image Utilities:** Apply filters and effects to images.
+- **Audio/Video Utilities:** Convert formats, adjust volume, normalize audio, and merge files.
+- **PDF Utilities:** Merge PDF files and extract graphics.
+- **Graphics Utilities:** Add watermarks and create collages.
 
-- **Graphic utilities:**  
-  Adding watermarks, creating collages, and other operations to process graphics.
-
-- **Audio/video manipulation:**  
-  Convert multimedia files to different formats, change volume, normalize audio, and merge multiple files into one.
-
-- **Working with PDF:**  
-  Combine multiple PDF files, extract graphs and other data for further analysis.
-
-## 🔧Setup
-
-Make sure you have Python version ### or higher installed. 
-To install the package, run the command:
+## 🔧Installation
+Install via pip:
 
 ```bash
-pip install media-processor
+pip install media_processor
 ```
 
 ## 🧙‍♀️Usage
-...
+Applying a Blur Filter to an Image
+``` python
+image_utils.apply_blur_filter(f"{PATH_BLUR}input.jpg", f"{PATH_BLUR}blurred.jpg", radius=5)
+```
+
+Converting an Audio File
+``` python
+audio_video_utils.convert_audio(f"{PATH_AUDIO}input.wav", f"{PATH_AUDIO}output.mp3", f="mp3")
+```
+
+Merging Two PDF Files
+``` python
+pdf_files = [f"{PATH_PDF}doc1.pdf", f"{PATH_PDF}doc2.pdf"]
+pdf_utils.merge_pdfs(pdf_files, f"{PATH_PDF}merged.pdf")
+```
+
+Adding a Watermark to an Image
+``` python
+graphics_utils.add_watermark(f"{PATH_WATERMARK}photo.jpg", f"{PATH_WATERMARK}watermark.png",
+                             f"{PATH_WATERMARK}watermarked_photo.jpg", position=(20, 20))
+```
+
